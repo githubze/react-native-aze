@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Image, Platform, StyleSheet, Text, View} from 'react-native';
 
 class DetailScreen extends Component {
+    static navigationOptions = {
+        title: '任务详情',
+        headerBackImage:<Image source={require('../HomePage/back.png')}/>,
+    };
+
     render() {
         const data=this.props.navigation.state.params;
         return (
